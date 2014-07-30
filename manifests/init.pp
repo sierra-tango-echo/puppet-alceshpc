@@ -13,6 +13,9 @@ class alceshpc (
   # - slave
   # - master
   $role = hiera('alcesbase::role','slave'),
+  #Supported machines
+  # - generic
+  $machine = hiera('alcesbase::machine','generic'),
   #Cluster name:
   $clustername = hiera('alcesbase::clustername','alcescluster'),
   #Master IP (network master IP addr)
@@ -25,5 +28,24 @@ class alceshpc (
   $jitter=$alcesbase::jitter
 )
 {
+
+  class { 'alceshpc::packages':
+  }
+
+  class { 'alceshpc::lustre':
+    lustre=>hiera('alceshpc::lustre',false),
+    lustrenetworks=>hiera('alceshpc::lustrenetworks',undef),
+    lustretype=>hiera('alceshpc::lustretype','client'),
+    lustreclient_mountpoint=>hiera('alceshpc::lustreclient_mountpoint','/mnt/lustre'),
+    lustreclient_target=>hiera('alceshpc::lustreclient_target',undef)
+  }
+
+  class { 'alceshpc::limits':
+  }
+
+  class { 'alceshpc::scheduler':
+    schedulertype=>hiera('alceshpc::schedulertype','gridscheduler'),
+    schedulerrole=>hiera('alceshpc::schedulerrole','client'),
+  }
 
 }
