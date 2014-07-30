@@ -1,0 +1,10 @@
+#IB LNET
+options lnet networks=<%=@lustrenetworks%>
+#TCP LNET
+#options lnet networks=tcp0(em1)
+<%if @storage%>
+#LIMIT MDS LOAD
+options mdt mds_num_threads=96
+#LIMIT OSS LOAD
+options ost oss_num_threads=96
+<%end-%>

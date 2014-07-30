@@ -1,0 +1,4 @@
+- @server-platform
+- @network-server
+- @cifs-file-server
+- @nfs-file-server

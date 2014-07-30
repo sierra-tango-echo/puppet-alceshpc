@@ -1,0 +1,7 @@
+- @alces-base
+- @alces-slave-base
+- @alces-graphical-base
+- @alces-base-management
+- @alces-base-monitoring
+- @alces-slave-monitoring
+- @alces-base-hpc-provisioning

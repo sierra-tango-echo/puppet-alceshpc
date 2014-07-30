@@ -1,0 +1,9 @@
+- freenx
+- nx
+- libXcomposite
+- jre
+- fping
+- nmap
+- xorg-x11-fonts-75dpi
+- @alces-hpc-libs
+- @alces-master-hpc-libs
