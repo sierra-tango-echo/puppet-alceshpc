@@ -8,9 +8,9 @@
 - fping
 - nmap
 - xorg-x11-fonts-75dpi
-- @alces-hpc-libs
-- @alces-master-hpc-libs
+- '@alces-hpc-libs'
+- '@alces-master-hpc-libs'
 - gcc
-- @alces-libs
-- @alces-hpc-libs
-- @desktop
+- '@alces-libs'
+- '@alces-hpc-libs'
+- '@desktop'

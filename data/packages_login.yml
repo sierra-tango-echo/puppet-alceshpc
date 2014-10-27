@@ -1,5 +1,5 @@
-- @alces-libs
-- @alces-hpc-libs
+- '@alces-libs'
+- '@alces-hpc-libs'
 - freenx 
 - nx 
 - libXcomposite
@@ -12,10 +12,10 @@
 - fping
 - nmap
 - xorg-x11-fonts-75dpi
-- @general-desktop
-- @graphical-admin-tools
-- @basic-desktop
-- @desktop-platform
-- @internet-applications
-- @internet-browser
-- @desktop
+- '@general-desktop'
+- '@graphical-admin-tools'
+- '@basic-desktop'
+- '@desktop-platform'
+- '@internet-applications'
+- '@internet-browser'
+- '@desktop'

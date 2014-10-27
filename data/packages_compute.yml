@@ -1,4 +1,4 @@
 - scons
 - pcre-devel
-- @alces-libs
-- @alces-hpc-libs
+- '@alces-libs'
+- '@alces-hpc-libs'
