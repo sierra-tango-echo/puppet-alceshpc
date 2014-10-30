@@ -41,6 +41,10 @@ if [ -z "$HOME" ]; then
   export HOME=/root
 fi
 
+if [ -f /etc/profile.d/modules.sh ]; then
+  . /etc/profile.d/modules.sh
+fi
+
 if [ -f /etc/profile.d/alces-symphony.sh ]; then
   . /etc/profile.d/alces-symphony.sh
 fi
