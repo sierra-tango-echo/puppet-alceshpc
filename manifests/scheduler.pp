@@ -5,12 +5,13 @@
 ##
 ################################################################################
 class alceshpc::scheduler (
-  $schedulertype,
+  $gridscheduler,
+  $torque,
   $schedulerrole,
   $ha=$alceshpc::ha,
 )
 {
-  if $schedulertype == 'alces-gridscheduler' {
+  if $gridscheduler {
       user{'geadmin':
         uid=>'360',
         gid=>'360',
@@ -66,7 +67,8 @@ class alceshpc::scheduler (
           require=>File['/etc/init.d/execd.alces-gridscheduler']
         }
       }
-  } elsif $schedulertype	== 'alces-torque' {
+  } 
+  if $torque {
       if $alceshpc::profile == 'compute' {
         file{'/etc/init.d/pbs_mom':
           ensure=>present,

@@ -40,7 +40,8 @@ class alceshpc (
   }
 
   class { 'alceshpc::scheduler':
-    schedulertype=>hiera('alceshpc::schedulertype','gridscheduler'),
+    gridscheduler=>hiera('alceshpc::scheduler::gridscheduler',true),
+    torque=>hiera('alceshpc::scheduler::torque',false),
     schedulerrole=>hiera('alceshpc::schedulerrole','client'),
   }
 

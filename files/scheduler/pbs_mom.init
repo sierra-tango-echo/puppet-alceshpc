@@ -10,8 +10,8 @@ ulimit -l unlimited
 # Source the library functions
 . /etc/rc.d/init.d/functions
 
-PBS_DAEMON=/opt/alces/pkg/services/torque/2.5.9/sbin/pbs_mom
-PBS_HOME=/opt/alces/pkg/services/torque/2.5.9/spool/
+PBS_DAEMON=/opt/service//torque/2.5.13/sbin/pbs_mom
+PBS_HOME=/opt/service//torque/2.5.13/spool/
 LOCAL_PBS_HOME=/var/spool/torque
 
 export PBS_DAEMON PBS_HOME LOCAL_PBS_HOME
